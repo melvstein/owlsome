@@ -33,3 +33,9 @@ Customer Page (COD):
 - Profile
 - Buy Now, Add to Cart, Checkout, View Order Details
 
+To use this system:
+- run "php artisan migrate"
+- php artisan migrate:fresh --seed
+- npm run watch
+- default login as admin: email = owlsome2021@gmail.com and pass = admin1234
+- php artisan queue:work
