@@ -1,0 +1,99 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+@layer components{
+
+    .theme-color{
+        @apply bg-yellow-900;
+    }
+
+    .bar1, .bar2, .bar3{
+    @apply w-10 h-2 bg-black m-1 transition;
+    }
+
+    .change .bar1{
+        @apply transform -rotate-45 -translate-x-0.5 translate-y-3;
+    }
+
+    .change .bar2{
+        @apply opacity-0;
+    }
+
+    .change .bar3{
+        @apply transform rotate-45 translate-x-0 -translate-y-3;
+    }
+
+    .sidebar{
+        @apply fixed top-0 left-0 bg-yellow-900 w-64 min-h-full border-r border-gray-100 shadow-lg text-white;
+    }
+
+    .sidelink, .side-dropdown{
+        @apply hover:bg-yellow-600 p-4 font-semibold;
+    }
+
+    .sidebar .fa-caret-down{
+        @apply float-right;
+    }
+
+    .sidebar .active{
+        @apply border-l-4 border-yellow-700 bg-gray-100 text-yellow-900;
+    }
+
+    .side-dropdown:after{
+        content: '\2B9C';
+        float: right;
+    }
+
+    .sidebar .active:after {
+        content: "\2B9F";
+      }
+
+    .user-navbar{
+        @apply bg-yellow-900 text-white shadow-lg
+    }
+
+    .user-navbar .active{
+        @apply bg-yellow-700 border-l-4 border-yellow-600;
+    }
+
+    .nav-dropdown{
+        @apply hover:bg-yellow-600 p-4 font-semibold;
+    }
+
+    .responsive-dropdown{
+        @apply text-white no-underline hover:bg-gray-300 hover:text-black px-3 py-2 rounded mt-2;
+    }
+
+    .responsive-dropdown:after, .nav-dropdown:after{
+        content: '\2B9C';
+        float: right;
+        @apply pl-4;
+    }
+
+    .user-navbar .active:after{
+        content: "\2B9F";
+    }
+    /* Scroll Bar */
+    /* width */
+    ::-webkit-scrollbar {
+        @apply w-2;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        @apply bg-gray-300;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        @apply bg-yellow-900 rounded;
+    }
+
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        @apply bg-yellow-800;
+    }
+}
