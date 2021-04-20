@@ -10,6 +10,7 @@ Features
 -  Listeners
 -  Mails
 -  Providers
+-  Queue Jobs
 
 Admin Page:
 - Dashboard
