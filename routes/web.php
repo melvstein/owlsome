@@ -37,6 +37,7 @@ Route::get('tester', function(){
 /* Route::get('/testmail', [MailController::class, 'orderReceipt']); */
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/contact-us', [HomeController::class, 'contactUsView'])->name('contactUsView');
+Route::post('/contact-us-send', [HomeController::class, 'contactUsSend'])->name('contactus.send');
 Route::get('/search-result', [HomeController::class, 'searchResult'])->name('searchResult');
 
 /* Route::get('/', function()
