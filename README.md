@@ -1,5 +1,5 @@
 # owlsome
- Simple E-commerce
+ Simple E-commerce using Laravel Breeze, Tailwindcss, Jquery and AlpineJs
 
 Features
 - Admin. Staff and Customer Page.
