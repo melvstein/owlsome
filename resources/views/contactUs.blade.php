@@ -2,6 +2,7 @@
     @section('title', 'Contact Us - '.$business->name)
     <x-main.navbar :oncartCount="$oncartCount" />
     <div class="max-w-7xl mx-auto p-0 mt-4 md:mt-0 md:p-4">
+        <x-main.validation-message />
         <div class="relative bg-white border shadow rounded-none md:rounded">
            <div class="bg-gray-50 rounded-none md:rounded-t border-b p-4">
                 <h1 class="text-lg font-semibold text-yellow-900 uppercase">
@@ -10,24 +11,29 @@
            </div>
             <div class="grid grid-cols-1 gap-4 md:grid-cols-2 p-4">
                 <div class="p-4">
-                    <form action="">
+                    <form action="{{ route('contactus.send') }}" method="POST">
+                        @csrf
                         <div class="mb-2">
-                            <input type="email" class="block rounded w-full" name="" id="" placeholder="Your Email Address" required>
+                            <input type="text" class="block rounded w-full" name="name" id="name" placeholder="Your Name" required>
                         </div>
 
                         <div class="mb-2">
-                            <input type="text" class="block rounded w-full" name="" id="" placeholder="Your Name" required>
+                            <input type="email" class="block rounded w-full" name="email" id="email" placeholder="Your Email Address" required>
                         </div>
 
                         <div class="mb-2">
-                            <input type="text" class="block rounded w-full" name="" id="" placeholder="Subject" required>
+                            <input type="number" class="block rounded w-full" name="contactNumber" id="contactNumber" placeholder="Contact Number" required>
                         </div>
 
                         <div class="mb-2">
-                            <textarea class="block rounded w-full h-40" name="" id="" placeholder="Message" required></textarea>
+                            <input type="text" class="block rounded w-full" name="subject" id="subject" placeholder="Subject" required>
                         </div>
 
-                        <button class="border rounded bg-yellow-900 hover:bg-yellow-700 text-white px-4 py-2 w-full">
+                        <div class="mb-2">
+                            <textarea class="block rounded w-full h-40" name="message" id="message" placeholder="Message" required></textarea>
+                        </div>
+
+                        <button type="submit" class="border rounded bg-yellow-900 hover:bg-yellow-700 text-white px-4 py-2 w-full">
                             Submit
                         </button>
                     </form>

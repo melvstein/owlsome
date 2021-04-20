@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactUsMail;
 use App\Models\Order;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\ProductCategory;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -43,5 +45,29 @@ class HomeController extends Controller
     {
         $oncartCount = Order::oncartCount();
         return view('contactUs', compact(['oncartCount']));
+    }
+
+    public function contactUsSend(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required|email',
+            'contactNumber' => 'required|min:11|max:11',
+            'subject' => 'required',
+            'message' => 'required'
+        ]);
+
+        $details = [
+                'name' => $request->name,
+                'email' => $request->email,
+                'contactNumber' => $request->contactNumber,
+                'subject' => $request->subject,
+                'message' => $request->message,
+            ];
+
+        /* dd($details['email']); */
+        Mail::to('owlsome2021@gmail.com')->send(new ContactUsMail($details));
+
+        return redirect()->back()->with('message', 'Mail Sent Successfully, Thank you!');
     }
 }
