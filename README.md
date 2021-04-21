@@ -34,9 +34,13 @@ Customer Page (COD):
 - Buy Now, Add to Cart, Checkout, View Order Details
 
 To use this system:
-- run "php artisan migrate"
-- php artisan migrate:fresh --seed
-- npm run watch
-- php artisan storage:link
+Run 
+- "composer install"
+- "npm install"
+- "php artisan key:generate"
+- "php artisan storage:link"
+- "php artisan migrate"
+- "php artisan migrate:fresh --seed"
+- "php artisan queue:work"
 - default login as admin: email = owlsome2021@gmail.com and pass = admin1234
-- php artisan queue:work
+
