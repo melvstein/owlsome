@@ -1,4 +1,4 @@
-# owlsome (Simple E-commerce using Laravel Breeze, Tailwindcss, Jquery and AlpineJs)
+# owlsome (Simple E-commerce using Laravel Breeze, Tailwindcss, Jquery and AlpineJs with Intervention Image) by Melvs
 
 Features
 - Admin. Staff and Customer Page.
