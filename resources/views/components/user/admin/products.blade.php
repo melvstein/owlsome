@@ -39,8 +39,8 @@
                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">{{ $product->units }}</td>
                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">{{ $product->details }}</td>
                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">{{ $product->description }}</td>
-                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">{{ $product->created_at }}</td>
-                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">{{ $product->updated_at }}</td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">{{ date("F j, Y, g:i a", strtotime($product->updated_at)) }}</td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">{{ date("F j, Y, g:i a", strtotime($product->updated_at)) }}</td>
                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                 <div class="flex items-center space-x-2">
                                     <a href="{{ route(Str::lower(auth()->user()->role).'.product.edit', ['id' => $product->id]) }}" class="p-1 bg-green-600 hover:bg-green-500 text-green-100 rounded">

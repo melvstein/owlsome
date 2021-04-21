@@ -21,8 +21,8 @@
                             <tr>
                                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">{{ $category->id }}</td>
                                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">{{ $category->name }}</td>
-                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">{{ $category->created_at }}</td>
-                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">{{ $category->updated_at }}</td>
+                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">{{ date("F j, Y, g:i a", strtotime($category->updated_at)) }}</td>
+                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">{{ date("F j, Y, g:i a", strtotime($category->updated_at)) }}</td>
                                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                     <div class="flex items-center space-x-2">
                                         <div x-data="dropdown()">
