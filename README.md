@@ -34,6 +34,9 @@ Customer Page (COD):
 - Buy Now, Add to Cart, Checkout, View Order Details
 
 To use this system:
+
+cp .env.example -> .env
+
 Run 
 - "composer install"
 - "npm install"
