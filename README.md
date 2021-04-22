@@ -35,15 +35,15 @@ Customer Page (COD):
 
 To use this system:
 
-cp .env.example -> .env
-
-Run 
-- "composer install"
-- "npm install"
-- "php artisan key:generate"
-- "php artisan storage:link"
-- "php artisan migrate"
-- "php artisan migrate:fresh --seed"
-- "php artisan queue:work"
+Clone the repository with git clone
+Copy .env.example file to .env and edit database credentials there
+Run composer install
+Run php artisan key:generate
+Run php artisan migrate --seed (it has some seeded data for your testing)
+Run php artisan storage:link
+Run npm install
+Run npm run dev
+Run php artisan queue:work
+Run php artisan serve
 - default login as admin: email = owlsome2021@gmail.com and pass = admin1234
-
+Done!
