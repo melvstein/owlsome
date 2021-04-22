@@ -34,16 +34,15 @@ Customer Page (COD):
 - Buy Now, Add to Cart, Checkout, View Order Details
 
 To use this system:
-
-Clone the repository with git clone
-Copy .env.example file to .env and edit database credentials there
-Run composer install
-Run php artisan key:generate
-Run php artisan migrate --seed (it has some seeded data for your testing)
-Run php artisan storage:link
-Run npm install
-Run npm run dev
-Run php artisan queue:work
-Run php artisan serve
+- Clone the repository with git clone
+- Copy .env.example file to .env and edit database credentials there
+- Run composer install
+- Run php artisan key:generate
+- Run php artisan migrate --seed (it has some seeded data for your testing)
+- Run php artisan storage:link
+- Run npm install
+- Run npm run dev
+- Run php artisan queue:work
+- Run php artisan serve
 - default login as admin: email = owlsome2021@gmail.com and pass = admin1234
 Done!
