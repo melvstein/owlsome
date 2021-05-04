@@ -34,7 +34,7 @@ Customer Page (COD):
 - Buy Now, Add to Cart, Checkout, View Order Details
 
 To use Facebook and Google Login:
-Create your own access key and secret key on Facebook and Google Developers API
+- Create your own access key and secret key on Facebook and Google Developers API
 
 To use this system:
 - Clone the repository with git clone
